@@ -55,7 +55,7 @@ function handleFormSubmit(e) {
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
         isValid = false;
-    } else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
+    } else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&\[\](){}])[A-Za-z\d@$!%*?&\[\](){}]{8,}$/)) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
