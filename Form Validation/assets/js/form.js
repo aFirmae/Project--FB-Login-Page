@@ -2,8 +2,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById('email').focus();
 });
 
-const loginForm = document.getElementById('loginForm');
-loginForm.addEventListener('submit', (e) => {
+function handleFormSubmit(e) {
     e.preventDefault();
 
     const addedPTags = document.querySelectorAll('p.added-after-submit');
@@ -11,6 +10,8 @@ loginForm.addEventListener('submit', (e) => {
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
+
+    let isValid = true;
 
     if (email === '') {
         const emailErrorText = document.createElement('p');
@@ -21,8 +22,8 @@ loginForm.addEventListener('submit', (e) => {
         const emailInput = document.getElementById('email');
         emailInput.parentNode.insertBefore(emailErrorText, emailInput.nextSibling);
         emailInput.focus();
-    }
-    else if (!email.includes('@') || !email.includes('.')) {
+        isValid = false;
+    } else if (!email.includes('@') || !email.includes('.')) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
@@ -31,6 +32,7 @@ loginForm.addEventListener('submit', (e) => {
         const emailInput = document.getElementById('email');
         emailInput.parentNode.insertBefore(errorText, emailInput.nextSibling);
         emailInput.focus();
+        isValid = false;
     }
 
     if (password === '') {
@@ -42,18 +44,18 @@ loginForm.addEventListener('submit', (e) => {
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(passwordErrorText, passwordInput.nextSibling);
         passwordInput.focus();
-    }
-    else if (password.length < 8) {
+        isValid = false;
+    } else if (password.length < 6) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'Password must be at least 8 characters long';
+        errorText.textContent = 'Password must be at least 6 characters long';
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
-    }
-    else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
+        isValid = false;
+    } else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/)) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
@@ -62,8 +64,18 @@ loginForm.addEventListener('submit', (e) => {
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
+        isValid = false;
     }
-});
+
+    if (isValid) {
+        printCredentials(email, password);
+    }
+}
+
+function printCredentials(email, password) {
+    console.log(`Email: ${email}`);
+    console.log(`Password: ${password}`);
+}
 
 document.getElementById("togglePassword").addEventListener("click", function () {
     const passwordInput = document.getElementById("password");
