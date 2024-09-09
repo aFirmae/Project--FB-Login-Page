@@ -23,7 +23,8 @@ function handleFormSubmit(e) {
         emailInput.parentNode.insertBefore(emailErrorText, emailInput.nextSibling);
         emailInput.focus();
         isValid = false;
-    } else if (!email.includes('@') || !email.includes('.')) {
+    } 
+    else if (!email.includes('@') || !email.includes('.')) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
@@ -45,17 +46,30 @@ function handleFormSubmit(e) {
         passwordInput.parentNode.insertBefore(passwordErrorText, passwordInput.nextSibling);
         passwordInput.focus();
         isValid = false;
-    } else if (password.length < 6) {
+    } 
+    else if (password.length < 8) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'Password must be at least 6 characters long';
+        errorText.textContent = 'Password must be at least 8 characters long';
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
         isValid = false;
-    } else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&\[\](){}])[A-Za-z\d@$!%*?&\[\](){}]{8,}$/)) {
+    } 
+    else if (password.includes('-') || password.includes('.')) {
+        const errorText = document.createElement('p');
+        errorText.classList.add('added-after-submit');
+        errorText.style.color = 'red';
+        errorText.style.fontSize = '13px';
+        errorText.textContent = 'Password cannot contain "-" or "."';
+        const passwordInput = document.getElementById('password');
+        passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
+        passwordInput.focus();
+        isValid = false;
+    } 
+    else if (!password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&\[\](){}])[A-Za-z\d@#$!%*+=-_,|:;"'/\\?&\[\](){}<>]{8,}$/)) {
         const errorText = document.createElement('p');
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
