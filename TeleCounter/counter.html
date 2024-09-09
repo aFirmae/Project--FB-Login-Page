@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tele Counter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        #display {
+            display: flex;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 300px;
+        }
+
+        #counter {
+            display: flex;
+            justify-content: center;
+        }
+
+        #counter button {
+            margin: 0 10px;
+            width: 70px;
+        }
+
+        #reset {
+            width: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="counter-body">
+        <div id="display">Counter: 0</div>
+        <div id="counter">
+            <button class="btn btn-danger" onclick="decrement()">-</button>
+            <button class="btn btn-success" onclick="increment()">+</button>
+        </div>
+        <div class="d-flex justify-content-center">
+            <button id="reset" class="btn btn-secondary" onclick="reset()">Reset</button>
+        </div>
+    </div>
+
+    <script>
+        let count = 0;
+
+        function increment() {
+            count++;
+            document.getElementById('display').innerText = "Counter: " + count;
+        }
+
+        function decrement() {
+            count--;
+            document.getElementById('display').innerText = "Counter: " + count;
+        }
+
+        function reset() {
+            count = 0;
+            document.getElementById('display').innerText = "Counter: " + count;
+        }
+    </script>
+</body>
+
+</html>
