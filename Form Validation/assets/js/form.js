@@ -83,22 +83,21 @@ function handleFormSubmit(e) {
 
     if (isValid) {
         printCredentials(email, password);
+        showPopup();
     }
 }
 
 function printCredentials(email, password) {
     console.log(`Email: ${email}`);
     console.log(`Password: ${password}`);
-    showSuccessMessage();
 }
 
-function showSuccessMessage() {
-    const successDiv = document.getElementById('success');
-
-    successDiv.classList.add('show');
+function showPopup() {
+    const popup = document.getElementById('accountCreatedPopup');
+    popup.classList.add('show');
     setTimeout(() => {
-        successDiv.classList.remove('show');
-    }, 2000);
+        popup.classList.remove('show');
+    }, 5000);
 }
 
 document.getElementById("togglePassword").addEventListener("click", function () {
