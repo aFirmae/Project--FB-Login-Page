@@ -89,6 +89,16 @@ function handleFormSubmit(e) {
 function printCredentials(email, password) {
     console.log(`Email: ${email}`);
     console.log(`Password: ${password}`);
+    showSuccessMessage();
+}
+
+function showSuccessMessage() {
+    const successDiv = document.getElementById('success');
+
+    successDiv.classList.add('show');
+    setTimeout(() => {
+        successDiv.classList.remove('show');
+    }, 2000);
 }
 
 document.getElementById("togglePassword").addEventListener("click", function () {
