@@ -3,19 +3,39 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     const passwordInput = document.getElementById('password');
     const confirmPasswordInput = document.getElementById('confirmPassword');
+    const tooltip = document.createElement('div');
+    tooltip.className = 'custom-tooltip';
+    tooltip.innerText = 'Please fill in your password first!';
+    document.body.appendChild(tooltip);
 
     passwordInput.addEventListener('input', function () {
         if (passwordInput.value === '') {
             confirmPasswordInput.setAttribute('readonly', true);
+            confirmPasswordInput.dataset.tooltip = 'Please fill in your password first!';
         } else {
             confirmPasswordInput.removeAttribute('readonly');
+            delete confirmPasswordInput.dataset.tooltip;
         }
+    });
+
+    confirmPasswordInput.addEventListener('mouseover', function (event) {
+        if (confirmPasswordInput.dataset.tooltip) {
+            tooltip.classList.add('show');
+            tooltip.style.left = event.pageX + 'px';
+            tooltip.style.top = event.pageY + 'px';
+        }
+    });
+
+    confirmPasswordInput.addEventListener('mouseout', function () {
+        tooltip.classList.remove('show');
     });
 
     if (passwordInput.value === '') {
         confirmPasswordInput.setAttribute('readonly', true);
+        confirmPasswordInput.dataset.tooltip = 'Please fill in your password first!';
     } else {
         confirmPasswordInput.removeAttribute('readonly');
+        delete confirmPasswordInput.dataset.tooltip;
     }
 });
 
