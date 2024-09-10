@@ -19,13 +19,13 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     opacity: 0;
-    transition: top 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    transition: top 1s ease-in-out, opacity 0.5s ease-in-out;
     z-index: 1;
 }
 
 .popup i {
     --fa-beat-fade-opacity: 0.1;
-    --fa-beat-fade-scale: 1.25;
+    --fa-beat-fade-scale: 1.15;
     --fa-animation-duration: 2s;
 }
 
@@ -44,6 +44,10 @@ body {
 
 .card-body h4 {
     text-align: center;
+}
+
+#submit {
+    margin-top: 30px;
 }
 
 .added-after-submit {
