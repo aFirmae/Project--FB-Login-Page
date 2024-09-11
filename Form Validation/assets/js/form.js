@@ -56,7 +56,7 @@ function handleFormSubmit(e) {
         emailErrorText.classList.add('added-after-submit');
         emailErrorText.style.color = 'red';
         emailErrorText.style.fontSize = '13px';
-        emailErrorText.textContent = 'ⓘ Email address is required';
+        emailErrorText.textContent = 'Email address is required';
         const emailInput = document.getElementById('email');
         emailInput.parentNode.insertBefore(emailErrorText, emailInput.nextSibling);
         emailInput.focus();
@@ -67,7 +67,7 @@ function handleFormSubmit(e) {
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'ⓘ Please enter a valid email';
+        errorText.textContent = 'Please enter a valid email';
         const emailInput = document.getElementById('email');
         emailInput.parentNode.insertBefore(errorText, emailInput.nextSibling);
         emailInput.focus();
@@ -79,7 +79,7 @@ function handleFormSubmit(e) {
         passwordErrorText.classList.add('added-after-submit');
         passwordErrorText.style.color = 'red';
         passwordErrorText.style.fontSize = '13px';
-        passwordErrorText.textContent = 'ⓘ Password is required';
+        passwordErrorText.textContent = 'Password is required';
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(passwordErrorText, passwordInput.nextSibling);
         passwordInput.focus();
@@ -91,7 +91,7 @@ function handleFormSubmit(e) {
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'ⓘ Password must be at least 8 characters long';
+        errorText.textContent = 'Password must be at least 8 characters long';
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
@@ -103,7 +103,7 @@ function handleFormSubmit(e) {
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'ⓘ Password cannot contain "-" or "."';
+        errorText.textContent = 'Password cannot contain "-" or "."';
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
@@ -115,7 +115,7 @@ function handleFormSubmit(e) {
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'ⓘ Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character';
+        errorText.textContent = 'Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character';
         const passwordInput = document.getElementById('password');
         passwordInput.parentNode.insertBefore(errorText, passwordInput.nextSibling);
         passwordInput.focus();
@@ -128,7 +128,7 @@ function handleFormSubmit(e) {
         confirmPasswordErrorText.classList.add('added-after-submit');
         confirmPasswordErrorText.style.color = 'red';
         confirmPasswordErrorText.style.fontSize = '13px';
-        confirmPasswordErrorText.textContent = ' ⓘ Please confirm your password';
+        confirmPasswordErrorText.textContent = ' Please confirm your password';
         const confirmPasswordInput = document.getElementById('confirmPassword');
         confirmPasswordInput.parentNode.insertBefore(confirmPasswordErrorText, confirmPasswordInput.nextSibling);
         confirmPasswordInput.focus();
@@ -139,7 +139,7 @@ function handleFormSubmit(e) {
         errorText.classList.add('added-after-submit');
         errorText.style.color = 'red';
         errorText.style.fontSize = '13px';
-        errorText.textContent = 'ⓘ Passwords do not match';
+        errorText.textContent = 'Passwords do not match';
         const confirmPasswordInput = document.getElementById('confirmPassword');
         confirmPasswordInput.parentNode.insertBefore(errorText, confirmPasswordInput.nextSibling);
         confirmPasswordInput.focus();
