@@ -35,7 +35,7 @@ input::placeholder {
 }
 
 .popup.show {
-    top: 20px;
+    top: 45px;
     opacity: 1;
 }
 
