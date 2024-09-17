@@ -1,0 +1,199 @@
+/* General Styling */
+body {
+    background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+    color: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding-top: 56px;
+}
+
+/* Hide scrollbar for all browsers */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+.navbar {
+    background-color: #000;
+    z-index: 1000; /* Ensure the navbar stays on top */
+    position: fixed; /* Fix the navbar at the top */
+    width: 100%;
+    top: 0;
+}
+
+.navbar a {
+	color: #fff;
+}
+
+.navbar a:hover {
+    color: #7ddae4;
+    text-decoration: bold;
+    transform: scale(1.1) translateY(-2px) translateX(2px);
+}
+
+.navbar .active {
+	color: #feb47b;
+}
+
+nav button:hover {
+	cursor: pointer;
+	border: none;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #aaa;
+}
+
+.custom-divider {
+    border-top: 3px solid #555;
+    width: 50%;
+    margin: 20px auto;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+    text-align: center;
+	min-height: 50vh; /* Subject to remove */
+}
+
+section h2 {
+	margin-bottom: 20px;
+}
+
+/* Home Section */
+#home {
+	display: block;
+}
+#home div {
+	min-height: 100vh;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: transform 0.5s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.2);
+}
+
+/* Skills Section */
+#skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#skills ul li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#skills ul li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Project Cards */
+.card {
+    background-color: #333;
+    border: none;
+    margin-bottom: 20px;
+    color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background-color: #444;
+}
+
+/* Contact Form */
+form .form-control {
+    background-color: #222;
+    border: none;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+form .form-control:focus {
+    border-color: #feb47b;
+    box-shadow: none;
+}
+
+form button {
+    background: #feb47b;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Social Media Icons */
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.social-links li a {
+    color: #feb47b;
+    font-size: 1.5rem;
+}
+
+.social-links li a:hover {
+    color: #ff7e5f;
+}
+
+@media screen and (max-width: 768px) {
+	.profile-img {
+		width: 100px;
+		height: 100px;
+	}
+	
+	.social-links li a {
+		font-size: 1.25rem;
+	}
+
+	.card {
+		margin: 10px;
+	}
+
+	#skills ul li {
+		padding: 5px;
+	}
+
+	.custom-divider {
+		width: 75%;
+	}
+
+	section {
+		padding: 30px 0;
+	}
+
+	section h2 {
+		font-size: 1.5rem;
+	}
+
+	.subtitle {
+		font-size: 1rem;
+	}
+
+	.navbar a {
+		font-size: 0.9rem;
+	}
+}

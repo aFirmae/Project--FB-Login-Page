@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nilashis Saha Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span>
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="scroll-list" class="navbar-nav" style="margin-left: 20px;">
+                    <li class="nav-item"><a id="start" class="nav-link" href="#home" onclick="scrollToMiddle('home')">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" onclick="scrollToMiddle('about')">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills" onclick="scrollToMiddle('skills')">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects" onclick="scrollToMiddle('projects')">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" onclick="scrollToMiddle('contact')">Contact Me</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+        <div class="container">
+            <h1 class="text-gradient">I am Nilashis Saha</h1>
+            <p class="subtitle">Computer Science | Adamas University</p>
+            <img src="assets/images/nilashis.jpg" alt="Nilashis Saha" class="profile-img">
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container text-center">
+            <h2 class="text-gradient">About Me</h2>
+            <p>I'm a tech enthusiast pursuing Computer Science. Exploring new technologies and building cool projects!</p>
+            <hr class="custom-divider">
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="text-gradient">Skills</h2>
+            <ul>
+                <li>HTML, CSS, JavaScript, ReactJS</li>
+                <li>NodeJS, ExpressJS, PHP, Python</li>
+                <li>SQL, Firebase, MongoDB</li>
+            </ul>
+            <hr class="custom-divider">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <h2 class="text-gradient">Projects</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Project 1</h5>
+                    <p class="card-text">Description of Project 1.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Project 2</h5>
+                    <p class="card-text">Description of Project 2.</p>
+                </div>
+            </div>
+            <hr class="custom-divider">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container text-center">
+            <h2 class="text-gradient">Contact Me</h2>
+            <form action="mailto:nilashis37@gmail.com" method="POST" enctype="text/plain">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <ul class="social-links mt-4">
+                <li><a href="https://linkedin.com/in/nilashis-saha" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/afirmae" target="_blank"><i class="fab fa-github"></i></a></li>
+                <li><a href="https://twitter.com/afirmae" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

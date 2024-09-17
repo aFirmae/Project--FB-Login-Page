@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100..800&family=Sofadi+One&display=swap');
+
+body {
+    background-color: #f8f9fa;
+}
+
+.user {
+    width: 45%;
+}
+
+.intro-text {
+    width: 90%;
+    margin: 40px 50px;
+    padding: 30px;
+    border: none;
+    border-radius: 0% 0% 20% 0% / 0% 0% 40% 0%;
+    background: linear-gradient(88.8deg, rgb(239, 171, 245) 13.4%, rgb(196, 181, 249) 76.3%);
+    box-shadow: rgba(169, 169, 169, 0.4) 5px 5px, rgba(211, 211, 211, 0.3) 10px 10px, rgba(245, 245, 245, 0.2) 15px 15px, rgba(211, 211, 211, 0.1) 20px 20px, rgba(245, 245, 245, 0.05) 25px 25px;
+    text-wrap: balance;
+}
+
+.heading-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.value-text {
+    font-size: 1em;
+    font-weight: 450;
+    color: rgb(0, 0, 1);
+}
+
+.form-group {
+    width: 90%;
+    min-height: 50vh;
+    margin: 40px 50px;
+    padding: 30px;
+    border: none;
+    border-radius: 12% 0% 12% 0% / 15% 0% 15% 0%;
+    background: linear-gradient(111.4deg, rgb(55, 168, 192) -0.2%, rgb(103, 187, 125) 100.2%);
+}
+
+.form-input {
+    margin: 0 30px 0 10px;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.form-header {
+    font-size: 16px;
+    font-family: "Playpen Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    margin: 20px 0 0 5px;
+}
+
+#g-label {
+    margin: 10px 0 10px 5px;
+}
+
+.gender-select {
+    margin: 0px 5px;
+}
+
+.form-control {
+    margin: 5px 0;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border-color: #FFF !important;
+}
+
+input[type="radio"] {
+    margin: 0 5px;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.4);
+    }
+}
+
+input[type="radio"]:checked {
+    animation: flicker 3s infinite;
+}
+
+.selectable {
+    display: flex;
+    position: relative;
+}
+
+.selectable input {
+    width: 1000%;
+    border-radius: 0.375em 0 0 0.375em;
+}
+
+#current-h-unit,
+#current-w-unit {
+    position: absolute;
+    opacity: 0.5;
+    top: 18%;
+    right: 18%;
+    font-size: 1.1em;
+}
+
+.selectable select {
+    cursor: pointer;
+    border-radius: 0 0.375em 0.375em 0;
+}
+
+#drop-down {
+    position: absolute;
+    top: 18%;
+    right: 5.5%;
+    font-size: 1.1em;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+#clearForm {
+    cursor: pointer;
+    position: absolute;
+    top: -2%;
+    right: -4%;
+    font-size: 1.3em;
+    opacity: 0.8;
+}
+
+@keyframes reload {
+    0%, 100% {transform: rotate(0deg)}
+    50% {transform: rotate(90deg)}
+}
