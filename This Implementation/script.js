@@ -7,6 +7,8 @@ function showValueInput() {
 
     document.getElementById("valueInputContainer").style.display = "block";
     document.getElementById("variableLabel").innerText = varName;
+    document.getElementById("variableLabel").style.color = "orange";
+    document.getElementById("variableLabel").style.fontWeight = "bold";
 }
 
 function startDemo() {
