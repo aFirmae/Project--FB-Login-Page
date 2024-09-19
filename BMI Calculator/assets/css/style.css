@@ -2,6 +2,7 @@
 
 body {
     background-color: #f8f9fa;
+    display: flex;
 }
 
 .user {
@@ -143,3 +144,26 @@ input[type="radio"]:checked {
     0%, 100% {transform: rotate(0deg)}
     50% {transform: rotate(90deg)}
 }
+
+.output {
+    width: 45%;
+}
+
+.output-text {
+    
+}
+
+@media screen and (max-width: 860px) {
+    body {
+        display: block;
+    }
+
+    .user {
+        width: 100%;
+    }
+    
+    .output {
+        width: 100%;
+    }
+}
+
